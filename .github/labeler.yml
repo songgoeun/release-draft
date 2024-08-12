@@ -1,3 +1,5 @@
+# .github/labeler.yml
+
 # enable labeler on issues, prs, or both.
 enable:
   issues: false
@@ -11,29 +13,29 @@ comments:
 labels:
   "bug":
     include:
-      - '\bbug\b'
-      - '\bfix\b'
+      - '(?i)\bbug\b'
+      - '(?i)\bfix\b'
     exclude: []
   "feature":
     include:
-      - '\bfeat\b'
-      - '\bfeature\b'
-      - '\badd\b'
+      - '(?i)\bfeat\b'
+      - '(?i)\bfeature\b'
+      - '(?i)\badd\b'
     exclude: []
   "refactor":
     include:
-      - '\brefactor\b'
-      - '\brefactoring\b'
+      - '(?i)\brefactor\b'
+      - '(?i)\brefactoring\b'
     exclude: []
   "documentation":
     include:
-      - '\bdocs\b'
+      - '(?i)\bdocs\b'
     exclude: []
   "chore":
     include:
-      - '\bchore\b'
+      - '(?i)\bchore\b'
     exclude: []
   "test":
     include:
-      - '\btest\b'
+      - '(?i)\btest\b'
     exclude: []
