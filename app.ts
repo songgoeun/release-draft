@@ -1,1 +1,1 @@
-console.log("app.ts");
+console.log("release-drafter test 중");
