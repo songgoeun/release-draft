@@ -13,19 +13,10 @@ comments:
 labels:
   "bug":
     include:
-      - '\bfix\b'
-  "test":
-    include:
-      - '\btest\b'
+      - '\bbug[s]?\b'
+    exclude: []
   "feature":
     include:
-      - '\bfeat\b'
-  "documentation":
-    include:
-      - '\bdocs\b'
-  "refactor":
-    include:
-      - '\brefactor\b'
-  "chore":
-    include:
-      - '\bchore\b'
+      - '\bfeat[s]?\b'
+      - '\bfeature[s]?\b'
+    exclude: []
