@@ -1,4 +1,3 @@
-# enable labeler on issues, prs, or both.
 enable:
   issues: false
   prs: true
@@ -11,29 +10,29 @@ comments:
 labels:
   "bug":
     include:
-      - '\bbug\b'
-      - '\bfix\b'
+      - '(?i)\[?\s*bug\s*\]?'
+      - '(?i)\[?\s*fix\s*\]?'
     exclude: []
   "feature":
     include:
-      - '\bfeat\b'
-      - '\bfeature\b'
-      - '\badd\b'
+      - '(?i)\[?\s*feat\s*\]?'
+      - '(?i)\[?\s*feature\s*\]?'
+      - '(?i)\[?\s*add\s*\]?'
     exclude: []
   "refactor":
     include:
-      - '\brefactor\b'
-      - '\brefactoring\b'
+      - '(?i)\[?\s*refactor\s*\]?'
+      - '(?i)\[?\s*refactoring\s*\]?'
     exclude: []
   "documentation":
     include:
-      - '\bdocs\b'
+      - '(?i)\[?\s*docs\s*\]?'
     exclude: []
   "chore":
     include:
-      - '\bchore\b'
+      - '(?i)\[?\s*chore\s*\]?'
     exclude: []
   "test":
     include:
-      - '\btest\b'
+      - '(?i)\[?\s*test\s*\]?'
     exclude: []
