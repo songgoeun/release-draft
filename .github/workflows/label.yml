@@ -28,13 +28,15 @@ on:
     types: [opened]
 
 jobs:
-  label:
+  labeler:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       pull-requests: write
 
     steps:
-      - uses: actions/labeler@v4
+      - name: Check Labels
+        id: labeler
+        uses: jimschubert/labeler-action@v2
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

@@ -53,7 +53,19 @@ comments:
 labels:
   "bug":
     include:
-      - '\bbug[s]?\b'
+      - '\bfix\b'
+  "test":
+    include:
+      - '\btest\b'
   "feature":
     include:
       - '\bfeat\b'
+  "documentation":
+    include:
+      - '\bdocs\b'
+  "refactor":
+    include:
+      - '\brefactor\b'
+  "chore":
+    include:
+      - '\bchore\b'
