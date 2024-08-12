@@ -1,55 +1,15 @@
-# rules:
-#   - label: "chore"
-#     files:
-#       - "*.md" # .md 파일에 대한 규칙
-#     branch:
-#       - '/docs{0,1}\/.+/' # 브랜치 이름이 docs/로 시작하는 경우
-#     title:
-#       - "/chore/i" # PR 제목이 'chore'를 포함하는 경우
-
-#   - label: "bug"
-#     branch:
-#       - '/fix\/.+/' # 브랜치 이름이 fix/로 시작하는 경우
-#     title:
-#       - "/fix/i" # PR 제목이 'fix'를 포함하는 경우
-#       - "/hotfix/i" # PR 제목이 'hotfix'를 포함하는 경우
-#       - "/bug/i" # PR 제목이 'bug'를 포함하는 경우
-
-#   - label: "feature"
-#     title:
-#       - "/feat/i" # PR 제목이 'feat'를 포함하는 경우
-#       - "/feature/i" # PR 제목이 'feature'를 포함하는 경우
-#       - "/add/i" # PR 제목이 'add'를 포함하는 경우
-#     branch:
-#       - '/add\/.+/' # 브랜치 이름이 add/로 시작하는 경우
-#       - '/feat\/.+/' # 브랜치 이름이 feat/로 시작하는 경우
-# labeler "full" schema
-
 # enable labeler on issues, prs, or both.
 enable:
-  issues: true
+  issues: false
   prs: true
-# comments object allows you to specify a different message for issues and prs
 
+# 레이블을 성공적으로 붙이고 PR에 보낼 코멘트를 설정
 comments:
-  issues: |
-    Thanks for opening this issue!
-    I have applied any labels matching special text in your title and description.
-
-    Please review the labels and make any necessary changes.
   prs: |
-    Thanks for the contribution!
-    I have applied any labels matching special text in your title and description.
-
+    Labeler has applied any labels matching special text in your title and description.
     Please review the labels and make any necessary changes.
 
-# Labels is an object where:
-# - keys are labels
-# - values are objects of { include: [ pattern ], exclude: [ pattern ] }
-#    - pattern must be a valid regex, and is applied globally to
-#      title + description of issues and/or prs (see enabled config above)
-#    - 'include' patterns will associate a label if any of these patterns match
-#    - 'exclude' patterns will ignore this label if any of these patterns match
+# 레이블
 labels:
   "bug":
     include:
