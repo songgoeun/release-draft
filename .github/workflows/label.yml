@@ -31,8 +31,6 @@ jobs:
   labeler:
     runs-on: ubuntu-latest
     steps:
-      - name: Check Labels
-        id: labeler
-        uses: jimschubert/labeler-action@v2
+      - uses: actions/labeler@v4
         with:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"

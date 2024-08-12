@@ -60,7 +60,7 @@ labels:
       - '\bhelp( me)?\b'
     exclude:
       - '\b\[test(ing)?\]\b'
-  "enhancement":
+  "feature":
     include:
       - '\bfeat\b'
     exclude: []
