@@ -8,14 +8,32 @@ comments:
     Labeler has applied any labels matching special text in your title and description.
     Please review the labels and make any necessary changes.
 
-# 레이블
 labels:
   "bug":
     include:
-      - '\bbug[s]?\b'
+      - '\bbug\b'
+      - '\bfix\b'
     exclude: []
   "feature":
     include:
-      - '\bfeat[s]?\b'
-      - '\bfeature[s]?\b'
+      - '\bfeat\b'
+      - '\bfeature\b'
+      - '\badd\b'
+    exclude: []
+  "refactor":
+    include:
+      - '\brefactor\b'
+      - '\brefactoring\b'
+    exclude: []
+  "documentation":
+    include:
+      - '\bdocs\b'
+    exclude: []
+  "chore":
+    include:
+      - '\bchore\b'
+    exclude: []
+  "test":
+    include:
+      - '\btest\b'
     exclude: []
