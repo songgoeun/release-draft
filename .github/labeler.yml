@@ -1,0 +1,38 @@
+enable:
+  issues: false
+  prs: true
+
+comments:
+  prs: |
+    Labeler has applied any labels matching special text in your title and description.
+    Please review the labels and make any necessary changes.
+
+labels:
+  "bug":
+    include:
+      - '(?i)\[?\s*bug\s*\]?'
+      - '(?i)\[?\s*fix\s*\]?'
+    exclude: []
+  "feature":
+    include:
+      - '(?i)\[?\s*feat\s*\]?'
+      - '(?i)\[?\s*feature\s*\]?'
+      - '(?i)\[?\s*add\s*\]?'
+    exclude: []
+  "refactor":
+    include:
+      - '(?i)\[?\s*refactor\s*\]?'
+      - '(?i)\[?\s*refactoring\s*\]?'
+    exclude: []
+  "documentation":
+    include:
+      - '(?i)\[?\s*docs\s*\]?'
+    exclude: []
+  "chore":
+    include:
+      - '(?i)\[?\s*chore\s*\]?'
+    exclude: []
+  "test":
+    include:
+      - '(?i)\[?\s*test\s*\]?'
+    exclude: []
