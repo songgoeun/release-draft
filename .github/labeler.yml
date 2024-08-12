@@ -10,29 +10,29 @@ comments:
 labels:
   "bug":
     include:
-      - '(?i)\[?bug\]?'
-      - '(?i)\[?fix\]?'
+      - '(?i)\[?\s*bug\s*\]?'
+      - '(?i)\[?\s*fix\s*\]?'
     exclude: []
   "feature":
     include:
-      - '(?i)\[?feat\]?\b'
-      - '(?i)\[?feature\]?\b'
-      - '(?i)\[?add\]?\b'
+      - '(?i)\[?\s*feat\s*\]?'
+      - '(?i)\[?\s*feature\s*\]?'
+      - '(?i)\[?\s*add\s*\]?'
     exclude: []
   "refactor":
     include:
-      - '(?i)\[?refactor\]?\b'
-      - '(?i)\[?refactoring\]?\b'
+      - '(?i)\[?\s*refactor\s*\]?'
+      - '(?i)\[?\s*refactoring\s*\]?'
     exclude: []
   "documentation":
     include:
-      - '(?i)\[?docs\]?\b'
+      - '(?i)\[?\s*docs\s*\]?'
     exclude: []
   "chore":
     include:
-      - '(?i)\[?chore\]?\b'
+      - '(?i)\[?\s*chore\s*\]?'
     exclude: []
   "test":
     include:
-      - '(?i)\[?test\]?\b'
+      - '(?i)\[?\s*test\s*\]?'
     exclude: []
