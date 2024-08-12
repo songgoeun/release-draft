@@ -54,13 +54,6 @@ labels:
   "bug":
     include:
       - '\bbug[s]?\b'
-    exclude: []
-  "help wanted":
-    include:
-      - '\bhelp( me)?\b'
-    exclude:
-      - '\b\[test(ing)?\]\b'
   "feature":
     include:
       - '\bfeat\b'
-    exclude: []
