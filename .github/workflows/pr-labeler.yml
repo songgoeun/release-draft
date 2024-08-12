@@ -16,4 +16,4 @@ jobs:
         id: labeler
         uses: jimschubert/labeler-action@v1
         with:
-          repo-token: ${{secrets.LABELER_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.LABELER_TOKEN}}
