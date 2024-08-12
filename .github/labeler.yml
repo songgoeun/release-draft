@@ -1,0 +1,25 @@
+rules:
+  - label: "chore"
+    files:
+      - "*.md" # .md 파일에 대한 규칙
+    branch:
+      - '/docs{0,1}\/.+/' # 브랜치 이름이 docs/로 시작하는 경우
+    title:
+      - "/chore/i" # PR 제목이 'chore'를 포함하는 경우
+
+  - label: "bug"
+    branch:
+      - '/fix\/.+/' # 브랜치 이름이 fix/로 시작하는 경우
+    title:
+      - "/fix/i" # PR 제목이 'fix'를 포함하는 경우
+      - "/hotfix/i" # PR 제목이 'hotfix'를 포함하는 경우
+      - "/bug/i" # PR 제목이 'bug'를 포함하는 경우
+
+  - label: "feature"
+    title:
+      - "/feat/i" # PR 제목이 'feat'를 포함하는 경우
+      - "/feature/i" # PR 제목이 'feature'를 포함하는 경우
+      - "/add/i" # PR 제목이 'add'를 포함하는 경우
+    branch:
+      - '/add\/.+/' # 브랜치 이름이 add/로 시작하는 경우
+      - '/feat\/.+/' # 브랜치 이름이 feat/로 시작하는 경우
