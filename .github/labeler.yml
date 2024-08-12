@@ -15,23 +15,24 @@ labels:
     exclude: []
   "feature":
     include:
-      - '(?i)\[?feat\]?'
-      - '(?i)\[?add\]?'
+      - '(?i)\[?feat\]?\b'
+      - '(?i)\[?feature\]?\b'
+      - '(?i)\[?add\]?\b'
     exclude: []
   "refactor":
     include:
-      - '(?i)\[?refactor\]?'
-      - '(?i)\[?refactoring\]?'
+      - '(?i)\[?refactor\]?\b'
+      - '(?i)\[?refactoring\]?\b'
     exclude: []
   "documentation":
     include:
-      - '(?i)\[?docs\]?'
+      - '(?i)\[?docs\]?\b'
     exclude: []
   "chore":
     include:
-      - '(?i)\[?chore\]?'
+      - '(?i)\[?chore\]?\b'
     exclude: []
   "test":
     include:
-      - '(?i)\[?test\]?'
+      - '(?i)\[?test\]?\b'
     exclude: []
