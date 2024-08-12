@@ -13,29 +13,29 @@ comments:
 labels:
   "bug":
     include:
-      - '(?i)\bbug\b'
-      - '(?i)\bfix\b'
+      - "(?i)bug"
+      - "(?i)fix"
     exclude: []
   "feature":
     include:
-      - '(?i)\bfeat\b'
-      - '(?i)\bfeature\b'
-      - '(?i)\badd\b'
+      - "(?i)feat"
+      - "(?i)feature"
+      - "(?i)add"
     exclude: []
   "refactor":
     include:
-      - '(?i)\brefactor\b'
-      - '(?i)\brefactoring\b'
+      - "(?i)refactor"
+      - "(?i)refactoring"
     exclude: []
   "documentation":
     include:
-      - '(?i)\bdocs\b'
+      - "(?i)docs"
     exclude: []
   "chore":
     include:
-      - '(?i)\bchore\b'
+      - "(?i)chore"
     exclude: []
   "test":
     include:
-      - '(?i)\btest\b'
+      - "(?i)test"
     exclude: []
