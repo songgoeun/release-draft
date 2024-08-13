@@ -16,9 +16,8 @@ labels:
   "feature":
     include:
       - '(?i)\[?\s*feat\s*\]?'
-      - '(?i)\[?\s*feature\s*\]?'
       - '(?i)\[?\s*add\s*\]?'
-    exclude: []
+    exclude: ["feature"]
   "refactor":
     include:
       - '(?i)\[?\s*refactor\s*\]?'
