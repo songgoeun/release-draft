@@ -10,14 +10,12 @@ comments:
 labels:
   "bug":
     include:
-      - '(?i)\[?\s*bug\s*\]?'
-      - '(?i)\[?\s*fix\s*\]?'
+      - '(?i)\[?\s*bugfix\s*\]?'
     exclude: []
   "feature":
     include:
-      - '(?i)\[?\s*feat\s*\]?'
-      - '(?i)\[?\s*add\s*\]?'
-    exclude: ["feature"]
+      - '(?i)\[?\s*feature\s*\]?'
+    exclude: []
   "refactor":
     include:
       - '(?i)\[?\s*refactor\s*\]?'
