@@ -1,4 +1,5 @@
-console.log("fix!!");
+console.log("chore!!!");
+console.log("bug!!!");
 console.log("chore");
 console.log("function");
-console.log("release 0.1.0");
+console.log("release 0.1.1");
