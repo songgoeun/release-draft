@@ -8,11 +8,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./BE
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v3
         with:
           node-version: 20.11.1
+
+      - run: npm install
+        working-directory: ./BE
+
       - run: npm run dev
+        working-directory: ./BE
