@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "dev": "echo BE"
-  },
-  "dependencies": {
-    "express": "^4.19.2"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "dev": "echo: FE"
-  },
-  "dependencies": {
-    "react": "^18.3.1"
-  }
-}
