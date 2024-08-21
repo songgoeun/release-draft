@@ -15,6 +15,8 @@ jobs:
 
   labeler:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./
     permissions:
       contents: read
       pull-requests: write
