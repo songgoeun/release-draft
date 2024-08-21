@@ -1,4 +1,29 @@
-name: Release Drafter
+# name: Release Drafter
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     types: [closed]
+
+# permissions:
+#   contents: read
+
+# jobs:
+#   update_release_draft:
+#     permissions:
+#       contents: write
+#       pull-requests: write
+#     runs-on: ubuntu-latest
+#     if: github.event.pull_request.merged == true && github.base_ref == 'main'
+#     steps:
+#       - uses: release-drafter/release-drafter@v5
+#         with:
+#           config-name: release-drafter-config.yml
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+name: Release Drafter and Publish
 
 on:
   push:
@@ -8,18 +33,34 @@ on:
     types: [closed]
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 jobs:
-  update_release_draft:
-    permissions:
-      contents: write
-      pull-requests: write
+  update_and_publish_release:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true && github.base_ref == 'main'
     steps:
-      - uses: release-drafter/release-drafter@v5
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Update Release Draft
+        uses: release-drafter/release-drafter@v5
         with:
           config-name: release-drafter-config.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create or Update Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Release v${{ github.run_number }}
+          body: ${{ steps.update_release_draft.outputs.release_notes }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish Release
+        if: steps.create_release.outputs.upload_url != ''
+        run: echo "Release created successfully and published."
