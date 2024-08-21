@@ -1,35 +1,20 @@
 enable:
-  issues: false
-  prs: true
+  - issues: false
+  - prs: true
 
 comments:
-  prs: |
-    Labeler has applied any labels matching special text in your title and description.
-    Please review the labels and make any necessary changes.
+  - prs: Labeler has applied any labels matching special text in your title and description. Please review the labels and make any necessary changes.
 
 labels:
-  "bug":
-    include:
-      - '(?i)\[?\s*bugfix\s*\]?'
-    exclude: []
-  "feature":
-    include:
-      - '(?i)\[?\s*feature\s*\]?'
-    exclude: []
-  "refactor":
-    include:
-      - '(?i)\[?\s*refactor\s*\]?'
-      - '(?i)\[?\s*refactoring\s*\]?'
-    exclude: []
-  "documentation":
-    include:
-      - '(?i)\[?\s*docs\s*\]?'
-    exclude: []
-  "chore":
-    include:
-      - '(?i)\[?\s*chore\s*\]?'
-    exclude: []
-  "test":
-    include:
-      - '(?i)\[?\s*test\s*\]?'
-    exclude: []
+  - name: bug
+    pattern: '(?i)\[?\s*bugfix\s*\]?'
+  - name: feature
+    pattern: '(?i)\[?\s*feature\s*\]?'
+  - name: refactor
+    pattern: '(?i)\[?\s*refactor\s*\]?'
+  - name: documentation
+    pattern: '(?i)\[?\s*docs\s*\]?'
+  - name: chore
+    pattern: '(?i)\[?\s*chore\s*\]?'
+  - name: test
+    pattern: '(?i)\[?\s*test\s*\]?'
