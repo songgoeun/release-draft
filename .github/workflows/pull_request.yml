@@ -1,8 +1,8 @@
 name: Auto Labeler and Review Assign
 
 on:
-  pull_request:
-    types: [opened, ready_for_review]
+  pull_request_target:
+    types: [opened]
 
 jobs:
   assign:
@@ -15,14 +15,13 @@ jobs:
 
   labeler:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./
     permissions:
       contents: read
       pull-requests: write
     if: github.base_ref != 'main'
     steps:
       - name: Check Labels
+        id: labeler
         uses: jimschubert/labeler-action@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
