@@ -1,4 +1,4 @@
-name: Develop CI
+name: Develop FE CI
 
 on:
   push:
@@ -15,4 +15,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20.11.1
+
+      - run: npm install
+        working-directory: ./FE
+
       - run: npm run dev
+        working-directory: ./FE
